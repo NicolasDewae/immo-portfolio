@@ -1,0 +1,83 @@
+section {
+    display: flex;
+}
+
+h1 {
+    position: absolute;
+    color: black;
+    margin: 3vh 0 0 3vh;
+    text-transform: uppercase;
+}
+
+div .priceLeft {
+    width: 50%;
+    height: 100vh;
+}
+
+div .priceLeft img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+div .priceRight {
+    width: 50%;
+}
+
+div .priceRight h2 {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 20% 0;
+}
+
+div .priceRight p {
+    text-align: left;
+    margin: 50px 15vh;
+}
+
+div .priceRight .detailPrice p {
+    font-size: 20px;
+    margin: 25% 30px 5% 30px;
+}
+
+section .hiddenImg {
+    display: none;
+}
+
+@media screen and (max-width: 1075px) {
+    div .priceRight p {
+        margin: 50px 10vh;
+    }
+
+    div .priceRight .detailPrice p {
+        margin-top: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        display: block;
+    }
+
+    div .priceLeft {
+        width: 100%;
+    }
+
+    div .priceRight {
+        width: 100%;
+    }
+
+    div .hiddenImg {
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    div .hiddenImg img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
