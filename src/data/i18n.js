@@ -40,7 +40,7 @@ export const mainComponent = {
 
 export const priceComponent = {
         title: 'Prix des prestations',
-        nbPhoto: '10 photos',
+        nbPhoto: '10',
         time: '24H'
 }
 
