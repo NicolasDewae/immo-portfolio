@@ -20,9 +20,49 @@ export const imgPath = {
     immoChambreAlt: 'chambre avec papier peint',
     immoCuisineVerteSrc: './assets/img/immo-cuisineVerte.jpg',
     immoCuisineVerteAlt: 'photo immobilière d\'une cuisine verte',
-    immoChambreEtudianteSrc: './assets/img/immo-chambreEtudiante.jpg',
-    immoChambreEtudianteAlt: 'photo immobilière d\'une chambre étudiante',
+    immoCuisineNoireSrc: './assets/img/immo-cuisineNoire.jpg',
+    immoCuisineNoireAlt: 'photo immobilière d\'une cuisine noire',
 }
+
+export const imgPathFull = [
+    {
+        src: './assets/fullPageImages/immo-1.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-2.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-3.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-4.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-5.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-6.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-7.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-8.jpg',
+        alt: 'photographie immobilière',
+    },
+    {
+        src: './assets/fullPageImages/immo-9.jpg',
+        alt: 'photographie immobilière',
+    },
+]
+
 
 export const videoPath = {
     weddingVideoSrc: 'https://www.youtube.com/embed/wd9ZCiK_SZc',
@@ -40,7 +80,7 @@ export const mainComponent = {
 
 export const priceComponent = {
         title: 'Prix des prestations',
-        nbPhoto: '10',
+        nbPhoto: '7',
         time: '24H'
 }
 
@@ -56,6 +96,6 @@ export const contactComponent = {
     },
     pdf: {
         title: 'Télécharger la plaquette',
-        src: '/assets/plaquetteImmo.pdf',
+        src: '/assets/plaquette-nicolasDeWagner.pdf',
     }
 }
