@@ -18,7 +18,7 @@ export const imgPath = {
     immoGrangeAlt: 'photo immobilière d\'une grange',
     immoChambreSrc: './assets/img/immo-chambre.jpg',
     immoChambreAlt: 'chambre avec papier peint',
-    immoCuisineVerteSrc: './assets/img/immo-cuisineVerte.jpg',
+    immoCuisineVerteSrc: './assets/img/immo-salleAManger.jpg',
     immoCuisineVerteAlt: 'photo immobilière d\'une cuisine verte',
     immoCuisineNoireSrc: './assets/img/immo-cuisineNoire.jpg',
     immoCuisineNoireAlt: 'photo immobilière d\'une cuisine noire',
