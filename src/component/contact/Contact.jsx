@@ -22,7 +22,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="contactRight">
-                    <img src={imgPath.immoChambreEtudianteSrc} alt={imgPath.immoChambreEtudianteAlt} />
+                    <img src={imgPath.immoCuisineNoireSrc} alt={imgPath.immoCuisineNoireAlt} />
                 </div>
             </section>
         </>
