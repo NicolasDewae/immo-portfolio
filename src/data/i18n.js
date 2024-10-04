@@ -84,6 +84,11 @@ export const priceComponent = {
         time: '24H'
 }
 
+export const clientComponent = {
+    title: 'Ils nous ont fait confiance',
+    
+}
+
 export const contactComponent = {
     title: 'Contactez-moi',
     form: {
