@@ -1,33 +1,26 @@
-import React from "react";
+import React from 'react';
 import './Client.css';
 import { clientComponent, imgPath } from '../../data/i18n';
 
 const Client = () => {
-
-    return (
-        <>
-            <section>
-                <div className="clientLeft">
-                    <div>
-                        <img src={imgPath.immoCuisineVerteSrc} alt={imgPath.immoCuisineVerteAlt} />
-                    </div>
-                </div>
-                <div className="clientRight">
-                    <h2>{clientComponent.title}</h2>
-                <div className="detailPrice">
-                    <p>
-                        TODO : Ajouter les logos des entreprises avec lesquels j'ai déjà travaillé et les rendre cliquable vers les articles en question 
-                    </p>
-                </div>
-                </div>
-                <div className="hiddenImg">
-                    <div>
-                        <img src={imgPath.immoTeteLitSrc} alt={imgPath.immoTeteLitAlt} />
-                    </div>
-                </div>
-            </section>
-        </>
-    );
-}
+  return (
+    <section className="client-section">
+      <div className="client-text">
+        <span className="client-label reveal">Confiance</span>
+        <h2 className="client-heading reveal d1">{clientComponent.title}</h2>
+        <p className="client-body reveal d2">
+          Agences immobilières, promoteurs et particuliers —&nbsp;je mets en lumière
+          chaque espace pour maximiser l'impact de vos annonces et séduire vos acheteurs.
+        </p>
+        <a href="#contact" className="client-cta reveal d3">
+          Travailler ensemble&nbsp;→
+        </a>
+      </div>
+      <div className="client-img reveal d1">
+        <img src={imgPath.immoGrangeSrc} alt={imgPath.immoGrangeAlt} />
+      </div>
+    </section>
+  );
+};
 
 export default Client;

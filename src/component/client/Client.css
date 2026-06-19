@@ -1,83 +1,79 @@
-section {
-    display: flex;
+.client-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 120px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-h1 {
-    position: absolute;
-    color: black;
-    margin: 3vh 0 0 3vh;
-    text-transform: uppercase;
+.client-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
 }
 
-div .clientLeft {
-    width: 50%;
-    height: 100vh;
+.client-heading {
+  font-size: clamp(32px, 4vw, 64px);
+  font-weight: 300;
+  margin-bottom: 28px;
+  line-height: 1.05;
+  color: var(--fg);
 }
 
-div .clientLeft img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+.client-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 380px;
+  margin-bottom: 40px;
 }
 
-div .clientRight {
-    width: 50%;
+.client-cta {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-div .clientRight h2 {
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    margin: 5% 0 20% 0;
+.client-cta:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
-div .clientRight p {
-    text-align: left;
-    margin: 50px 15vh;
+.client-img {
+  height: clamp(340px, 45vw, 560px);
+  overflow: hidden;
 }
 
-div .clientRight .detailPrice p {
-    font-size: 20px;
-    margin: 25% 30px 5% 30px;
+.client-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease);
 }
 
-section .hiddenImg {
-    display: none;
+.client-img:hover img {
+  transform: scale(1.04);
 }
 
-@media screen and (max-width: 1075px) {
-    div .clientRight p {
-        margin: 50px 10vh;
-    }
-
-    div .clientRight .detailPrice p {
-        margin-top: 40%;
-    }
+@media (max-width: 900px) {
+  .client-section {
+    grid-template-columns: 1fr;
+    padding: 80px 32px;
+    gap: 48px;
+  }
+  .client-img { height: clamp(260px, 65vw, 400px); }
 }
-
-@media screen and (max-width: 800px) {
-    section {
-        display: block;
-    }
-
-    div .clientLeft {
-        width: 100%;
-    }
-
-    div .clientRight {
-        width: 100%;
-    }
-
-    div .hiddenImg {
-        display: block;
-        width: 100%;
-        height: 100vh;
-    }
-    
-    div .hiddenImg img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-}
-
