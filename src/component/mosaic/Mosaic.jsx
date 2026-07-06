@@ -4,8 +4,8 @@ import './Mosaic.css';
 import { imgPath, imgPathFull } from '../../data/i18n';
 
 const mosaicImages = [
-  { src: imgPath.immoTeteLitSrc, alt: imgPath.immoTeteLitAlt },
   imgPathFull[3],
+  { src: imgPath.immoTeteLitSrc, alt: imgPath.immoTeteLitAlt },
   { src: imgPath.immoSalonBoisSrc, alt: imgPath.immoSalonBoisAlt },
   imgPathFull[4],
   imgPathFull[5],
