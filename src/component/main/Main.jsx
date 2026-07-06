@@ -12,7 +12,7 @@ const Main = () => {
   }, []);
 
   return (
-    <section className="hero" id="top">
+    <section className="hero" id="top" data-panel="hero">
       <div className="hero__content">
         <span className="hero__label">Photographie immobilière</span>
         <h1 className="hero__title">

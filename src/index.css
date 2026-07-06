@@ -5,11 +5,12 @@
 }
 
 :root {
-  --bg: #0e0e0e;
-  --fg: #f0ebe4;
-  --accent: #b5916a;
-  --muted: rgba(240, 235, 228, 0.45);
-  --border: rgba(240, 235, 228, 0.12);
+  --bg: #FAF7F2;
+  --fg: #18140F;
+  --panel: #ECE4DA;
+  --accent: #C1573C;
+  --muted: rgba(24, 20, 15, 0.55);
+  --border: rgba(24, 20, 15, 0.14);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -74,7 +75,7 @@ button {
 .cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(240, 235, 228, 0.7);
+  border: 1px solid rgba(24, 20, 15, 0.55);
   transition: width 0.35s var(--ease), height 0.35s var(--ease), opacity 0.35s ease;
 }
 
@@ -113,3 +114,38 @@ button {
 .d2 { transition-delay: 0.22s; }
 .d3 { transition-delay: 0.38s; }
 .d4 { transition-delay: 0.55s; }
+
+/* ── Pill button ── */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.85em 1.8em;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--fg);
+  transition: background 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+
+.btn-pill:hover {
+  background: var(--panel);
+  color: var(--fg);
+  border-color: var(--panel);
+}
+
+.btn-pill--invert {
+  background: var(--bg);
+  color: var(--fg);
+  border-color: var(--bg);
+}
+
+.btn-pill--invert:hover {
+  background: var(--panel);
+  color: var(--fg);
+  border-color: var(--panel);
+}

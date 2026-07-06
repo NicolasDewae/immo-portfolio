@@ -4,7 +4,7 @@ import { contactComponent, imgPath } from '../../data/i18n';
 
 const Contact = () => {
   return (
-    <section className="contact-section" id="contact">
+    <section className="contact-section" id="contact" data-panel="contact">
       <div className="contact-img">
         <img src={imgPath.immoCuisineNoireSrc} alt={imgPath.immoCuisineNoireAlt} />
         <div className="contact-img__overlay" />
@@ -43,7 +43,7 @@ const Contact = () => {
           </div>
 
           <div className="form-actions">
-            <button type="submit">{contactComponent.form.submit}</button>
+            <button type="submit" className="btn-pill">{contactComponent.form.submit}</button>
             <a
               href={contactComponent.pdf.src}
               target="_blank"

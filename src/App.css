@@ -4,3 +4,41 @@
   position: relative;
   background: var(--bg);
 }
+
+/* ── Horizontal scroll journey ── */
+.scroll-stage {
+  position: relative;
+}
+
+.scroll-viewport {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-track {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  will-change: transform;
+  transition: transform 0s;
+}
+
+@media (max-width: 800px) {
+  .scroll-stage {
+    height: auto !important;
+  }
+
+  .scroll-viewport {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .scroll-track {
+    flex-direction: column;
+    height: auto;
+    transform: none !important;
+  }
+}

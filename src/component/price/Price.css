@@ -1,7 +1,13 @@
 .price-section {
-  background: var(--fg);
-  color: var(--bg);
-  padding: 120px 60px;
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+  background: var(--panel);
+  color: var(--fg);
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .price-inner {
@@ -11,6 +17,8 @@
   max-width: 1400px;
   margin: 0 auto;
   align-items: center;
+  width: 100%;
+  max-height: 100%;
 }
 
 .price-label {
@@ -24,10 +32,10 @@
 }
 
 .price-heading {
-  font-size: clamp(32px, 4vw, 64px);
+  font-size: clamp(28px, 3.4vw, 52px);
   font-weight: 300;
-  color: var(--bg);
-  margin-bottom: 56px;
+  color: var(--fg);
+  margin-bottom: 36px;
   line-height: 1.05;
 }
 
@@ -35,28 +43,36 @@
 .price-stats {
   display: flex;
   flex-direction: column;
-  margin-bottom: 44px;
+  margin-bottom: 28px;
 }
 
 .price-stat {
   display: flex;
   align-items: baseline;
   gap: 24px;
-  padding: 22px 0;
-  border-top: 1px solid rgba(14, 14, 14, 0.1);
+  padding: 14px 0;
+  border-top: 1px solid rgba(24, 20, 15, 0.12);
 }
 
 .price-stat:last-child {
-  border-bottom: 1px solid rgba(14, 14, 14, 0.1);
+  border-bottom: 1px solid rgba(24, 20, 15, 0.12);
 }
 
 .price-stat__num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(38px, 5vw, 76px);
+  font-size: clamp(32px, 3.6vw, 56px);
   font-weight: 300;
   line-height: 1;
-  color: var(--bg);
+  color: var(--fg);
   min-width: 2.2ch;
+}
+
+.price-asterisk {
+  font-size: 0.32em;
+  color: var(--accent);
+  vertical-align: super;
+  margin-left: 2px;
+  font-style: normal;
 }
 
 .price-stat__desc {
@@ -64,20 +80,42 @@
   font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(14, 14, 14, 0.5);
+  color: rgba(24, 20, 15, 0.5);
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .price-detail {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.8rem;
-  color: rgba(14, 14, 14, 0.45);
+  color: rgba(24, 20, 15, 0.5);
   letter-spacing: 0.04em;
   font-weight: 300;
 }
 
+.price-footnotes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+}
+
+.price-footnote {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  color: rgba(24, 20, 15, 0.4);
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  font-style: italic;
+}
+
 /* ── Image ── */
 .price-img {
-  height: clamp(360px, 50vw, 620px);
+  height: min(64vh, 560px);
   overflow: hidden;
 }
 
@@ -92,11 +130,16 @@
   transform: scale(1.04);
 }
 
-@media (max-width: 900px) {
-  .price-section { padding: 80px 32px; }
+@media (max-width: 800px) {
+  .price-section {
+    width: 100%;
+    height: auto;
+    padding: 80px 32px;
+  }
   .price-inner {
     grid-template-columns: 1fr;
     gap: 56px;
+    max-height: none;
   }
   .price-img { height: clamp(280px, 70vw, 420px); }
 }
