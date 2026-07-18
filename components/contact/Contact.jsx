@@ -1,15 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import './Contact.css';
-import { contactComponent, imgPath } from '../../data/i18n';
+import { contactComponent, images } from '../../data/i18n';
 
 const Contact = () => {
   return (
     <section className="contact-section" id="contact" data-panel="contact">
       <div className="contact-img">
         <Image
-          src={imgPath.immoCuisineNoireSrc}
-          alt={imgPath.immoCuisineNoireAlt}
+          src={images.cuisineNoire.src}
+          alt={images.cuisineNoire.alt}
           fill
           sizes="(max-width: 800px) 100vw, 50vw"
         />

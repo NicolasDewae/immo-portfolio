@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import './Main.css';
-import { globalData, imgPath } from '../../data/i18n';
+import { globalData, images } from '../../data/i18n';
 
 const Main = () => {
   const imgRef = useRef(null);
@@ -30,8 +30,8 @@ const Main = () => {
       <div className="hero__img">
         <Image
           ref={imgRef}
-          src={imgPath.immoChambreSrc}
-          alt={imgPath.immoChambreAlt}
+          src={images.chambreMansardee.src}
+          alt={images.chambreMansardee.alt}
           fill
           sizes="(max-width: 800px) 100vw, 50vw"
           priority
@@ -40,8 +40,8 @@ const Main = () => {
 
       <div className="hero__img-accent">
         <Image
-          src={imgPath.immoPlanteSrc}
-          alt={imgPath.immoPlanteAlt}
+          src={images.plante.src}
+          alt={images.plante.alt}
           fill
           sizes="(max-width: 800px) 0px, 12vw"
         />

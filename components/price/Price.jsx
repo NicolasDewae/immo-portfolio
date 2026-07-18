@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import './Price.css';
-import { priceComponent, price, imgPath } from '../../data/i18n';
+import { priceComponent, price, images } from '../../data/i18n';
 
 const Price = () => {
   return (
@@ -48,8 +48,8 @@ const Price = () => {
 
         <div className="price-img reveal d2">
           <Image
-            src={imgPath.immoCuisineVerteSrc}
-            alt={imgPath.immoCuisineVerteAlt}
+            src={images.salleAMangerVaisselierBlanc.src}
+            alt={images.salleAMangerVaisselierBlanc.alt}
             fill
             sizes="(max-width: 800px) 100vw, 45vw"
           />

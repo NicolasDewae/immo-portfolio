@@ -5,7 +5,7 @@ import { siteUrl } from '../data/site';
 
 const siteName = `${globalData.authorName} — Photographe immobilier`;
 const siteDescription = 'Photographe immobilier sur la métropole lilloise. Mise en valeur de vos biens immobiliers pour agences, promoteurs et particuliers — reportage livré en 24h.';
-const ogImage = '/assets/img/immo-chambre.jpg';
+const ogImage = '/assets/img/immo-chambre-mansardee.jpg';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

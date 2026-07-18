@@ -9,100 +9,122 @@ export const price = {
     extraPhoto: '5'
 }
 
-export const imgPath = {
-    immoTeteLitSrc: '/assets/img/immo-tete-lit.jpg',
-    immoTeteLitAlt: 'tête de lit devant un papier peint',
-    immoPlanteSrc: '/assets/img/immo-plante.jpg',
-    immoPlanteAlt: 'plante d\'interieur',
-    immoGrangeSrc: '/assets/img/immo-grange.jpg',
-    immoGrangeAlt: 'photo immobilière d\'une grange',
-    immoChambreSrc: '/assets/img/immo-chambre.jpg',
-    immoChambreAlt: 'chambre avec papier peint',
-    immoCuisineVerteSrc: '/assets/img/immo-salleAManger.jpg',
-    immoCuisineVerteAlt: 'photo immobilière d\'une cuisine verte',
-    immoCuisineNoireSrc: '/assets/img/immo-cuisineNoire.jpg',
-    immoCuisineNoireAlt: 'photo immobilière d\'une cuisine noire',
-    immoSalonBoisSrc: '/assets/img/immo-salonBois.jpg',
-    immoSalonBoisAlt: 'photo immobilière d\'un salon en bois',
-    immoCuisineBoiseeSrc: '/assets/img/immo-1.jpg',
-    immoCuisineBoiseeAlt: 'cuisine et salle à manger en bois donnant sur un jardin fleuri',
-    immoCuisineIlotSrc: '/assets/img/immo-2.jpg',
-    immoCuisineIlotAlt: 'cuisine avec îlot arrondi en bois clair et vaisselier vitré',
-    immoChambreBleueSrc: '/assets/img/immo-3.jpg',
-    immoChambreBleueAlt: 'chambre classique avec tête de lit bleue capitonnée et papier peint fleuri',
-    immoCuisineBlancheSrc: '/assets/img/immo-4.jpg',
-    immoCuisineBlancheAlt: 'cuisine blanche épurée avec bar et tabourets design',
-    immoCuisineCarrelageVertSrc: '/assets/img/immo-5.jpg',
-    immoCuisineCarrelageVertAlt: 'cuisine avec crédence en carrelage métro vert',
-    immoSalleAMangerClassiqueSrc: '/assets/img/immo-6.jpg',
-    immoSalleAMangerClassiqueAlt: 'salle à manger classique avec buffet blanc et rideaux rouges',
-    immoCuisineVerandaSrc: '/assets/img/immo-7.jpg',
-    immoCuisineVerandaAlt: 'cuisine avec grande baie vitrée ouverte sur le jardin',
-    immoSalonPianoSrc: '/assets/img/immo-8.jpg',
-    immoSalonPianoAlt: 'salon avec piano à queue face à la piscine',
-    immoGrangeExterieurSrc: '/assets/img/immo-9.jpg',
-    immoGrangeExterieurAlt: 'extérieur d\'une grange rénovée avec jardin et bassin',
-}
-
-export const lilloiseImages = [
-    // Intérieurs classiques & campagne
-    {
-        src: '/assets/img/immo-la-lilloise-3.jpg',
+// Catalogue unique de toutes les photos du site : une entree par photo,
+// {src, alt} pour les usages nommes, {..., orientation} en plus pour les
+// photos utilisees dans une galerie (Mosaic). Les galeries ci-dessous sont
+// construites en reference a ces entrees, jamais de chemin duplique.
+export const images = {
+    chambreMansardee: {
+        src: '/assets/img/immo-chambre-mansardee.jpg',
+        alt: 'chambre mansardée avec papier peint à oiseaux sous un velux',
+    },
+    plante: {
+        src: '/assets/img/immo-plante.jpg',
+        alt: 'plante d\'intérieur devant une fenêtre',
+    },
+    cuisineNoire: {
+        src: '/assets/img/immo-cuisine-noire.jpg',
+        alt: 'cuisine noire avec suspension à motif de feuilles',
+    },
+    salleAMangerVaisselierBlanc: {
+        src: '/assets/img/immo-salle-a-manger-vaisselier-blanc.jpg',
+        alt: 'salle à manger classique avec vaisselier blanc et arche ouverte sur le salon',
+    },
+    chambreTeteLit: {
+        src: '/assets/img/immo-chambre-tete-lit.jpg',
+        alt: 'tête de lit bleue capitonnée devant un papier peint à chérubins',
+    },
+    cuisineBoisee: {
+        src: '/assets/img/immo-cuisine-boisee.jpg',
+        alt: 'cuisine et salle à manger en bois donnant sur un jardin fleuri',
+        orientation: 'horizontal',
+    },
+    cuisineIlot: {
+        src: '/assets/img/immo-cuisine-ilot.jpg',
+        alt: 'cuisine avec îlot arrondi en bois clair et vaisselier vitré',
+        orientation: 'horizontal',
+    },
+    chambreBleue: {
+        src: '/assets/img/immo-chambre-bleue.jpg',
+        alt: 'chambre classique avec tête de lit bleue capitonnée et papier peint fleuri',
+        orientation: 'horizontal',
+    },
+    cuisineBlanche: {
+        src: '/assets/img/immo-cuisine-blanche.jpg',
+        alt: 'cuisine blanche épurée avec bar et tabourets design',
+        orientation: 'horizontal',
+    },
+    cuisineCarrelageVert: {
+        src: '/assets/img/immo-cuisine-carrelage-vert.jpg',
+        alt: 'cuisine avec crédence en carrelage métro vert',
+        orientation: 'horizontal',
+    },
+    salleAMangerClassique: {
+        src: '/assets/img/immo-salle-a-manger-classique.jpg',
+        alt: 'salle à manger classique avec buffet blanc et rideaux rouges',
+        orientation: 'horizontal',
+    },
+    cuisineVeranda: {
+        src: '/assets/img/immo-cuisine-veranda.jpg',
+        alt: 'cuisine avec grande baie vitrée ouverte sur le jardin',
+        orientation: 'horizontal',
+    },
+    salonPiano: {
+        src: '/assets/img/immo-salon-piano.jpg',
+        alt: 'salon avec piano à queue face à la piscine',
+        orientation: 'horizontal',
+    },
+    grangeExterieur: {
+        src: '/assets/img/immo-grange-exterieur.jpg',
+        alt: 'extérieur d\'une grange rénovée avec jardin et bassin',
+        orientation: 'horizontal',
+    },
+    lilloiseEscalier: {
+        src: '/assets/img/immo-la-lilloise-escalier.jpg',
         alt: 'escalier en bois sculpté d\'un hall d\'entrée classique',
         orientation: 'horizontal',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-1.jpg',
-        alt: 'salle à manger boisée avec cheminée et grandes fenêtres',
+    lilloiseSalleAManger: {
+        src: '/assets/img/immo-la-lilloise-salle-a-manger.jpg',
+        alt: 'salle à manger habillée de boiseries anciennes avec bibliothèques vitrées',
         orientation: 'horizontal',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-12.jpg',
+    lilloiseBibliotheque: {
+        src: '/assets/img/immo-la-lilloise-bibliotheque.jpg',
         alt: 'bibliothèque classique avec cheminée en marbre',
         orientation: 'horizontal',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-1-2.jpg',
-        alt: 'cuisine rustique ouverte sur le jardin',
-        orientation: 'horizontal',
-    },
-    {
-        src: '/assets/img/immo-la-lilloise-9.jpg',
+    lilloiseMaisonPiscine: {
+        src: '/assets/img/immo-la-lilloise-maison-piscine.jpg',
         alt: 'maison de campagne avec piscine extérieure',
         orientation: 'horizontal',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-2.jpg',
+    lilloiseSalonModerne: {
+        src: '/assets/img/immo-la-lilloise-salon-moderne.jpg',
         alt: 'salon moderne avec canapé gris et fauteuil moutarde',
         orientation: 'horizontal',
     },
-    // Intérieurs contemporains
-    {
-        src: '/assets/img/immo-la-lilloise-4.jpg',
-        alt: 'cuisine ouverte avec îlot central en bois',
+    lilloiseCuisineBlanche: {
+        src: '/assets/img/immo-la-lilloise-cuisine-blanche.jpg',
+        alt: 'cuisine blanche avec plan de travail arrondi en bois et vaisselier vitré',
         orientation: 'horizontal',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-6.jpg',
-        alt: 'espace lounge lumineux aux fauteuils colorés',
-        orientation: 'horizontal',
-    },
-    {
-        src: '/assets/img/immo-la-lilloise-8.jpg',
+    lilloiseChambreJauneNoire: {
+        src: '/assets/img/immo-la-lilloise-chambre-jaune-noire.jpg',
         alt: 'chambre lumineuse aux murs jaune et noir',
         orientation: 'horizontal',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-11.jpg',
+    lilloiseDressingBleu: {
+        src: '/assets/img/immo-la-lilloise-dressing-bleu.jpg',
         alt: 'dressing bleu avec miroir et pouf en velours',
         orientation: 'vertical',
     },
-    {
-        src: '/assets/img/immo-la-lilloise-7.jpg',
+    lilloiseExterieurBoisZinc: {
+        src: '/assets/img/immo-la-lilloise-exterieur-bois-zinc.jpg',
         alt: 'extérieur d\'une maison contemporaine en bois et zinc',
         orientation: 'horizontal',
     },
-]
+}
 
 export const priceComponent = {
         title: 'Prix des prestations',
