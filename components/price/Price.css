@@ -23,11 +23,6 @@
 
 .price-label {
   display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
   margin-bottom: 20px;
 }
 

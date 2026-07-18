@@ -74,11 +74,6 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
   margin-bottom: 24px;
 }
 
@@ -91,8 +86,6 @@
 }
 
 .collage__title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
   font-size: clamp(40px, 5.5vw, 96px);
   line-height: 0.98;
   margin-bottom: 32px;

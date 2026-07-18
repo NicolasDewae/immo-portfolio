@@ -45,6 +45,15 @@ img {
   max-width: 100%;
 }
 
+/* ── Eyebrow label (small uppercase accent label used above headings) ── */
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 /* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
