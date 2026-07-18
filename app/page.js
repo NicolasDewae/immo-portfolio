@@ -7,10 +7,26 @@ import Collage from '../components/collage/Collage';
 import Mosaic from '../components/mosaic/Mosaic';
 import Price from '../components/price/Price';
 import Contact from '../components/contact/Contact';
-import { imgPath, aboutComponent, figuresComponent, lilloiseImages } from '../data/i18n';
+import { images, aboutComponent, figuresComponent } from '../data/i18n';
 
-const lilloiseGalleryA = lilloiseImages.slice(0, 6);
-const lilloiseGalleryB = lilloiseImages.slice(6);
+const lilloiseGalleryA = [
+  images.lilloiseEscalier,
+  images.lilloiseSalleAManger,
+  images.lilloiseBibliotheque,
+  images.lilloiseMaisonPiscine,
+  images.salonPiano,
+  images.lilloiseExterieurBoisZinc,
+];
+const portfolioGallery = [
+  images.cuisineBlanche,
+  images.cuisineCarrelageVert,
+  images.lilloiseSalonModerne,
+  images.cuisineVeranda,
+  images.salonPiano,
+  images.grangeExterieur,
+  images.lilloiseCuisineBlanche,
+  images.lilloiseChambreJauneNoire,
+];
 
 const MOBILE_BREAKPOINT = 800;
 
@@ -114,13 +130,10 @@ function HomePage() {
               label={aboutComponent.label}
               title={aboutComponent.title}
               body={aboutComponent.body}
-              images={[
-                { src: imgPath.immoCuisineBoiseeSrc, alt: imgPath.immoCuisineBoiseeAlt },
-                { src: imgPath.immoCuisineIlotSrc, alt: imgPath.immoCuisineIlotAlt },
-              ]}
+              images={[images.lilloiseDressingBleu, images.cuisineIlot]}
             />
 
-            <Mosaic />
+            <Mosaic images={lilloiseGalleryA} />
 
             <Collage
               variant="dark"
@@ -130,17 +143,13 @@ function HomePage() {
               body={figuresComponent.body}
               cta={figuresComponent.cta}
               onCta={(e) => { e.preventDefault(); scrollToPanel('contact'); }}
-              images={[
-                { src: imgPath.immoTeteLitSrc, alt: imgPath.immoTeteLitAlt },
-                { src: imgPath.immoChambreBleueSrc, alt: imgPath.immoChambreBleueAlt },
-              ]}
+              images={[images.chambreTeteLit, images.chambreBleue]}
             />
 
             <Price />
             <Contact />
 
-            <Mosaic images={lilloiseGalleryA} />
-            <Mosaic images={lilloiseGalleryB} />
+            <Mosaic images={portfolioGallery} />
           </div>
         </div>
       </div>

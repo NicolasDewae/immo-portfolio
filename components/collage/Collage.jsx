@@ -5,10 +5,22 @@ import './Collage.css';
 const Media = ({ base, overlap }) => (
   <div className="collage__media">
     <div className="collage__media-base">
-      <Image className="collage__img" src={base.src} alt={base.alt} fill sizes="(max-width: 800px) 60vw, 30vw" />
+      <Image
+        className={`collage__img${base.orientation === 'vertical' ? ' collage__img--contain' : ''}`}
+        src={base.src}
+        alt={base.alt}
+        fill
+        sizes="(max-width: 800px) 60vw, 30vw"
+      />
     </div>
     <div className="collage__media-overlap">
-      <Image className="collage__img" src={overlap.src} alt={overlap.alt} fill sizes="(max-width: 800px) 45vw, 22vw" />
+      <Image
+        className={`collage__img${overlap.orientation === 'vertical' ? ' collage__img--contain' : ''}`}
+        src={overlap.src}
+        alt={overlap.alt}
+        fill
+        sizes="(max-width: 800px) 45vw, 22vw"
+      />
     </div>
   </div>
 );

@@ -37,6 +37,17 @@
   object-fit: cover;
 }
 
+/* Vertical photos keep their own proportions instead of being cropped
+   to fill a frame sized for landscape shots. */
+.collage__img--contain {
+  object-fit: contain;
+  background: var(--bg);
+}
+
+.collage--dark .collage__img--contain {
+  background: var(--fg);
+}
+
 .collage__media-base {
   position: absolute;
   width: 72%;

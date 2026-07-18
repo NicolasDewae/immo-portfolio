@@ -4,23 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import './Mosaic.css';
-import { imgPath } from '../../data/i18n';
 
-// Every source photo is shot at the same ~3:2 sensor ratio (2:3 when vertical),
-// so grid cells are sized to that exact ratio too — no crop, no leftover gap.
-const defaultImages = [
-  { src: imgPath.immoCuisineBlancheSrc, alt: imgPath.immoCuisineBlancheAlt, orientation: 'horizontal' },
-  { src: imgPath.immoSalonBoisSrc, alt: imgPath.immoSalonBoisAlt, orientation: 'horizontal' },
-  { src: imgPath.immoCuisineCarrelageVertSrc, alt: imgPath.immoCuisineCarrelageVertAlt, orientation: 'horizontal' },
-  { src: imgPath.immoSalleAMangerClassiqueSrc, alt: imgPath.immoSalleAMangerClassiqueAlt, orientation: 'horizontal' },
-  { src: imgPath.immoCuisineVerandaSrc, alt: imgPath.immoCuisineVerandaAlt, orientation: 'horizontal' },
-  { src: imgPath.immoSalonPianoSrc, alt: imgPath.immoSalonPianoAlt, orientation: 'horizontal' },
-  { src: imgPath.immoGrangeExterieurSrc, alt: imgPath.immoGrangeExterieurAlt, orientation: 'horizontal' },
-  { src: imgPath.immoTeteLitSrc, alt: imgPath.immoTeteLitAlt, orientation: 'vertical' },
-];
-
-const Mosaic = ({ images }) => {
-  const mosaicImages = images || defaultImages;
+const Mosaic = ({ images: mosaicImages }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const close = () => setActiveIndex(null);
