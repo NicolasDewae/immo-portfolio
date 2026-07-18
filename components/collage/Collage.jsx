@@ -2,11 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import './Collage.css';
 
+const imgClass = (img) => `collage__img${img.orientation === 'vertical' ? ' collage__img--contain' : ''}`;
+
 const Media = ({ base, overlap }) => (
   <div className="collage__media">
     <div className="collage__media-base">
       <Image
-        className={`collage__img${base.orientation === 'vertical' ? ' collage__img--contain' : ''}`}
+        className={imgClass(base)}
         src={base.src}
         alt={base.alt}
         fill
@@ -15,7 +17,7 @@ const Media = ({ base, overlap }) => (
     </div>
     <div className="collage__media-overlap">
       <Image
-        className={`collage__img${overlap.orientation === 'vertical' ? ' collage__img--contain' : ''}`}
+        className={imgClass(overlap)}
         src={overlap.src}
         alt={overlap.alt}
         fill
@@ -27,11 +29,11 @@ const Media = ({ base, overlap }) => (
 
 const Collage = ({ variant, label, title, body, cta, onCta, images, dataPanel }) => {
   return (
-    <section className={`collage collage--${variant}`} data-panel={dataPanel}>
+    <section className={`collage collage--${variant}`} id={dataPanel} data-panel={dataPanel}>
       {variant === 'light' && <Media base={images[0]} overlap={images[1]} />}
 
       <div className="collage__text">
-        <span className="collage__label reveal">{label}</span>
+        <span className="collage__label eyebrow reveal">{label}</span>
         <h2 className="collage__title reveal d1">{title}</h2>
         <p className="collage__body reveal d2">{body}</p>
         {cta && (

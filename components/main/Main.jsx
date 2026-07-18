@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import './Main.css';
-import { globalData, images } from '../../data/i18n';
+import { globalData, images } from '../../data/content';
 
 const Main = () => {
   const imgRef = useRef(null);
@@ -15,9 +15,9 @@ const Main = () => {
   }, []);
 
   return (
-    <section className="hero" id="top" data-panel="hero">
+    <section className="hero" id="hero" data-panel="hero">
       <div className="hero__content">
-        <span className="hero__label">Photographie immobilière</span>
+        <span className="hero__label eyebrow">Photographie immobilière</span>
         <h1 className="hero__title">
           <span className="hero__line">Nicolas</span>
           <span className="hero__line hero__line--italic">De Wagner</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import './Contact.css';
-import { contactComponent, images } from '../../data/i18n';
+import { contactComponent, images } from '../../data/content';
 
 const Contact = () => {
   return (
@@ -16,7 +16,7 @@ const Contact = () => {
         <div className="contact-img__overlay" />
       </div>
       <div className="contact-form-wrap">
-        <span className="contact-label reveal">Contact</span>
+        <span className="contact-label eyebrow reveal">Contact</span>
         <h2 className="contact-heading reveal d1">{contactComponent.title}</h2>
 
         <form
@@ -54,7 +54,7 @@ const Contact = () => {
         </form>
 
         <div className="contact-footer reveal d4">
-          <span>{contactComponent.form.email && 'photographe immobilier'}</span>
+          <span>photographe immobilier</span>
         </div>
       </div>
     </section>

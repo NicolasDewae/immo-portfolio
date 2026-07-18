@@ -34,11 +34,6 @@ export const images = {
         src: '/assets/img/immo-chambre-tete-lit.jpg',
         alt: 'tête de lit bleue capitonnée devant un papier peint à chérubins',
     },
-    cuisineBoisee: {
-        src: '/assets/img/immo-cuisine-boisee.jpg',
-        alt: 'cuisine et salle à manger en bois donnant sur un jardin fleuri',
-        orientation: 'horizontal',
-    },
     cuisineIlot: {
         src: '/assets/img/immo-cuisine-ilot.jpg',
         alt: 'cuisine avec îlot arrondi en bois clair et vaisselier vitré',
@@ -57,11 +52,6 @@ export const images = {
     cuisineCarrelageVert: {
         src: '/assets/img/immo-cuisine-carrelage-vert.jpg',
         alt: 'cuisine avec crédence en carrelage métro vert',
-        orientation: 'horizontal',
-    },
-    salleAMangerClassique: {
-        src: '/assets/img/immo-salle-a-manger-classique.jpg',
-        alt: 'salle à manger classique avec buffet blanc et rideaux rouges',
         orientation: 'horizontal',
     },
     cuisineVeranda: {
@@ -151,8 +141,8 @@ export const figuresComponent = {
 export const contactComponent = {
     title: 'Contactez-moi',
     form: {
-        firstname: 'Nom',
-        lastname: 'Prénom',
+        firstname: 'Prénom',
+        lastname: 'Nom',
         email: 'Email',
         phone: 'Téléphone',
         message: 'Message',

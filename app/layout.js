@@ -1,6 +1,6 @@
 import '../styles/index.css';
 import '../styles/App.css';
-import { globalData } from '../data/i18n';
+import { globalData } from '../data/content';
 import { siteUrl } from '../data/site';
 
 const siteName = `${globalData.authorName} — Photographe immobilier`;

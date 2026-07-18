@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './Nav.css';
-import { globalData } from '../../data/i18n';
+import { globalData } from '../../data/content';
 
 const Nav = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);

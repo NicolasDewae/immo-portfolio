@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import './Price.css';
-import { priceComponent, price, images } from '../../data/i18n';
+import { priceComponent, price, images } from '../../data/content';
 
 const Price = () => {
   return (
     <section className="price-section" id="tarifs" data-panel="tarifs">
       <div className="price-inner">
         <div className="price-text">
-          <span className="price-label reveal">Tarifs</span>
+          <span className="price-label eyebrow reveal">Tarifs</span>
           <h2 className="price-heading reveal d1">{priceComponent.title}</h2>
 
           <div className="price-stats">
