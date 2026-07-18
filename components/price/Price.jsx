@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import './Price.css';
 import { priceComponent, price, imgPath } from '../../data/i18n';
 
@@ -46,7 +47,12 @@ const Price = () => {
         </div>
 
         <div className="price-img reveal d2">
-          <img src={imgPath.immoCuisineVerteSrc} alt={imgPath.immoCuisineVerteAlt} />
+          <Image
+            src={imgPath.immoCuisineVerteSrc}
+            alt={imgPath.immoCuisineVerteAlt}
+            fill
+            sizes="(max-width: 800px) 100vw, 45vw"
+          />
         </div>
       </div>
     </section>

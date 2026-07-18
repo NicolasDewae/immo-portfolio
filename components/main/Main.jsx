@@ -1,4 +1,7 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import './Main.css';
 import { globalData, imgPath } from '../../data/i18n';
 
@@ -25,11 +28,23 @@ const Main = () => {
       </div>
 
       <div className="hero__img">
-        <img ref={imgRef} src={imgPath.immoChambreSrc} alt={imgPath.immoChambreAlt} />
+        <Image
+          ref={imgRef}
+          src={imgPath.immoChambreSrc}
+          alt={imgPath.immoChambreAlt}
+          fill
+          sizes="(max-width: 800px) 100vw, 50vw"
+          priority
+        />
       </div>
 
       <div className="hero__img-accent">
-        <img src={imgPath.immoPlanteSrc} alt={imgPath.immoPlanteAlt} />
+        <Image
+          src={imgPath.immoPlanteSrc}
+          alt={imgPath.immoPlanteAlt}
+          fill
+          sizes="(max-width: 800px) 0px, 12vw"
+        />
       </div>
 
       <div className="hero__scroll">

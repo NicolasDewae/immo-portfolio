@@ -1,13 +1,16 @@
 .mosaic {
   flex-shrink: 0;
-  width: 100vw;
+  width: max-content;
   height: 100%;
   background: var(--bg);
   display: grid;
-  grid-template-columns: 1.3fr 0.85fr 1.3fr 0.85fr;
-  grid-template-rows: 1.35fr 1fr;
-  gap: 20px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column dense;
+  grid-auto-columns: max-content;
+  column-gap: 20px;
+  row-gap: 20px;
   padding: 60px;
+  box-sizing: border-box;
 }
 
 .mosaic__item {
@@ -15,36 +18,49 @@
   overflow: hidden;
   border: none;
   padding: 0;
-  background: none;
+  background: var(--bg);
   display: block;
-  width: 100%;
   height: 100%;
   cursor: pointer;
+}
+
+/* Every source photo is a ~3:2 (or 2:3) camera ratio, so cells match it
+   exactly — object-fit below is just a safety net, not doing real work. */
+.mosaic__item--horizontal {
+  aspect-ratio: 3 / 2;
+}
+
+.mosaic__item--vertical {
+  aspect-ratio: 2 / 3;
+  grid-row: span 2;
 }
 
 .mosaic__item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.9s var(--ease);
+  object-fit: contain;
+  transition: opacity 0.4s var(--ease);
 }
 
 .mosaic__item:hover img {
-  transform: scale(1.05);
+  opacity: 0.85;
 }
 
 @media (max-width: 800px) {
   .mosaic {
     width: 100%;
     height: auto;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
+    grid-auto-flow: row;
+    align-items: start;
     gap: 14px;
     padding: 60px 24px;
   }
 
-  .mosaic__item {
-    aspect-ratio: 3 / 4;
+  .mosaic__item--vertical {
+    grid-row: auto;
   }
 }
 

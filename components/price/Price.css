@@ -115,6 +115,7 @@
 
 /* ── Image ── */
 .price-img {
+  position: relative;
   height: min(64vh, 560px);
   overflow: hidden;
 }

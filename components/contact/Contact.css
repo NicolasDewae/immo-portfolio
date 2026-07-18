@@ -10,6 +10,7 @@
 
 /* ── Image ── */
 .contact-img {
+  position: relative;
   height: 100%;
   overflow: hidden;
 }
@@ -129,19 +130,6 @@
   align-items: center;
   gap: 36px;
   margin-top: 24px;
-}
-
-.pdf-link {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(24, 20, 15, 0.5);
-  transition: color 0.3s ease;
-}
-
-.pdf-link:hover {
-  color: var(--fg);
 }
 
 .contact-footer {

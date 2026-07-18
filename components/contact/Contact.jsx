@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import './Contact.css';
 import { contactComponent, imgPath } from '../../data/i18n';
 
@@ -6,7 +7,12 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact" data-panel="contact">
       <div className="contact-img">
-        <img src={imgPath.immoCuisineNoireSrc} alt={imgPath.immoCuisineNoireAlt} />
+        <Image
+          src={imgPath.immoCuisineNoireSrc}
+          alt={imgPath.immoCuisineNoireAlt}
+          fill
+          sizes="(max-width: 800px) 100vw, 50vw"
+        />
         <div className="contact-img__overlay" />
       </div>
       <div className="contact-form-wrap">
@@ -15,7 +21,7 @@ const Contact = () => {
 
         <form
           className="contact-form reveal d2"
-          action={`https://formsubmit.co/${process.env.REACT_APP_MY_EMAIL}`}
+          action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_MY_EMAIL}`}
           method="POST"
         >
           <input type="hidden" name="_next" value="/contact" />
@@ -44,14 +50,6 @@ const Contact = () => {
 
           <div className="form-actions">
             <button type="submit" className="btn-pill">{contactComponent.form.submit}</button>
-            <a
-              href={contactComponent.pdf.src}
-              target="_blank"
-              rel="noreferrer"
-              className="pdf-link"
-            >
-              {contactComponent.pdf.title}&nbsp;↗
-            </a>
           </div>
         </form>
 

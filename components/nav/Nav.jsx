@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import './Nav.css';
 import { globalData } from '../../data/i18n';

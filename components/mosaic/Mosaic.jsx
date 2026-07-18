@@ -1,20 +1,26 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+import Image from 'next/image';
 import './Mosaic.css';
-import { imgPath, imgPathFull } from '../../data/i18n';
+import { imgPath } from '../../data/i18n';
 
-const mosaicImages = [
-  imgPathFull[3],
-  { src: imgPath.immoTeteLitSrc, alt: imgPath.immoTeteLitAlt },
-  { src: imgPath.immoSalonBoisSrc, alt: imgPath.immoSalonBoisAlt },
-  imgPathFull[4],
-  imgPathFull[5],
-  imgPathFull[6],
-  imgPathFull[7],
-  imgPathFull[8],
+// Every source photo is shot at the same ~3:2 sensor ratio (2:3 when vertical),
+// so grid cells are sized to that exact ratio too — no crop, no leftover gap.
+const defaultImages = [
+  { src: imgPath.immoCuisineBlancheSrc, alt: imgPath.immoCuisineBlancheAlt, orientation: 'horizontal' },
+  { src: imgPath.immoSalonBoisSrc, alt: imgPath.immoSalonBoisAlt, orientation: 'horizontal' },
+  { src: imgPath.immoCuisineCarrelageVertSrc, alt: imgPath.immoCuisineCarrelageVertAlt, orientation: 'horizontal' },
+  { src: imgPath.immoSalleAMangerClassiqueSrc, alt: imgPath.immoSalleAMangerClassiqueAlt, orientation: 'horizontal' },
+  { src: imgPath.immoCuisineVerandaSrc, alt: imgPath.immoCuisineVerandaAlt, orientation: 'horizontal' },
+  { src: imgPath.immoSalonPianoSrc, alt: imgPath.immoSalonPianoAlt, orientation: 'horizontal' },
+  { src: imgPath.immoGrangeExterieurSrc, alt: imgPath.immoGrangeExterieurAlt, orientation: 'horizontal' },
+  { src: imgPath.immoTeteLitSrc, alt: imgPath.immoTeteLitAlt, orientation: 'vertical' },
 ];
 
-const Mosaic = () => {
+const Mosaic = ({ images }) => {
+  const mosaicImages = images || defaultImages;
   const [activeIndex, setActiveIndex] = useState(null);
 
   const close = () => setActiveIndex(null);
@@ -44,11 +50,11 @@ const Mosaic = () => {
         <button
           key={img.src}
           type="button"
-          className="mosaic__item"
+          className={`mosaic__item mosaic__item--${img.orientation}`}
           onClick={() => setActiveIndex(i)}
           aria-label={`Agrandir la photo : ${img.alt}`}
         >
-          <img src={img.src} alt={img.alt} loading="lazy" />
+          <Image src={img.src} alt={img.alt} fill sizes="(max-width: 800px) 50vw, 600px" />
         </button>
       ))}
 

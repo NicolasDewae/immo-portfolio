@@ -1,10 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 import './Collage.css';
 
 const Media = ({ base, overlap }) => (
   <div className="collage__media">
-    <img className="collage__img collage__img--base" src={base.src} alt={base.alt} loading="lazy" />
-    <img className="collage__img collage__img--overlap" src={overlap.src} alt={overlap.alt} loading="lazy" />
+    <div className="collage__media-base">
+      <Image className="collage__img" src={base.src} alt={base.alt} fill sizes="(max-width: 800px) 60vw, 30vw" />
+    </div>
+    <div className="collage__media-overlap">
+      <Image className="collage__img" src={overlap.src} alt={overlap.alt} fill sizes="(max-width: 800px) 45vw, 22vw" />
+    </div>
   </div>
 );
 

@@ -34,18 +34,19 @@
 }
 
 .collage__img {
-  position: absolute;
   object-fit: cover;
 }
 
-.collage__img--base {
+.collage__media-base {
+  position: absolute;
   width: 72%;
   height: 100%;
   left: 0;
   top: 0;
 }
 
-.collage__img--overlap {
+.collage__media-overlap {
+  position: absolute;
   width: 54%;
   height: 56%;
   right: 0;
