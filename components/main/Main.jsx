@@ -33,7 +33,8 @@ const Main = () => {
           src={images.chambreMansardee.src}
           alt={images.chambreMansardee.alt}
           fill
-          sizes="(max-width: 800px) 100vw, 50vw"
+          sizes="(max-width: 800px) 100vw, 151vh"
+          quality={90}
           priority
         />
       </div>
@@ -45,11 +46,6 @@ const Main = () => {
           fill
           sizes="(max-width: 800px) 0px, 12vw"
         />
-      </div>
-
-      <div className="hero__scroll">
-        <span>Scroll</span>
-        <div className="hero__scroll-line" />
       </div>
 
       <div className="hero__footer">

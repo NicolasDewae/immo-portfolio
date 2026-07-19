@@ -5,6 +5,7 @@ import Main from '../components/main/Main';
 import Collage from '../components/collage/Collage';
 import Mosaic from '../components/mosaic/Mosaic';
 import Price from '../components/price/Price';
+import Faq from '../components/faq/Faq';
 import Contact from '../components/contact/Contact';
 import { images, aboutComponent, figuresComponent } from '../data/content';
 import { useHorizontalScrollJourney } from '../hooks/useHorizontalScrollJourney';
@@ -50,7 +51,7 @@ function HomePage() {
               label={aboutComponent.label}
               title={aboutComponent.title}
               body={aboutComponent.body}
-              images={[images.lilloiseDressingBleu, images.cuisineIlot]}
+              images={[images.lilloiseDressingBleu, images.piscineInterieure]}
             />
 
             <Mosaic images={lilloiseGalleryA} />
@@ -63,10 +64,11 @@ function HomePage() {
               body={figuresComponent.body}
               cta={figuresComponent.cta}
               onCta={(e) => { e.preventDefault(); scrollToPanel('contact'); }}
-              images={[images.chambreTeteLit, images.chambreBleue]}
+              images={[images.chambreTeteLitRayee, images.salonCoussinsLosanges]}
             />
 
             <Price />
+            <Faq />
             <Contact />
 
             <Mosaic images={portfolioGallery} />

@@ -91,52 +91,6 @@
   object-fit: cover;
 }
 
-/* ── Scroll indicator ── */
-.hero__scroll {
-  position: absolute;
-  right: 40px;
-  bottom: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  z-index: 4;
-  animation: heroFadeUp 1s var(--ease) 1.3s both;
-}
-
-.hero__scroll span {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  opacity: 0.4;
-}
-
-.hero__scroll-line {
-  width: 1px;
-  height: 64px;
-  background: var(--border);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero__scroll-line::after {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--accent);
-  animation: scrollDown 1.8s ease-in-out infinite;
-}
-
-@keyframes scrollDown {
-  0%   { top: -100%; }
-  100% { top: 100%; }
-}
-
 /* ── Footer bar ── */
 .hero__footer {
   position: absolute;

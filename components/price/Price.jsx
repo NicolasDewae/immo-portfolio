@@ -48,8 +48,8 @@ const Price = () => {
 
         <div className="price-img reveal d2">
           <Image
-            src={images.salleAMangerVaisselierBlanc.src}
-            alt={images.salleAMangerVaisselierBlanc.alt}
+            src={images.chambreHotelFauteuils.src}
+            alt={images.chambreHotelFauteuils.alt}
             fill
             sizes="(max-width: 800px) 100vw, 45vw"
           />

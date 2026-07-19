@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   align-items: center;
   width: 100%;
@@ -109,16 +109,19 @@
 }
 
 /* ── Image ── */
+/* Sized to the photo's own ratio (not the grid column) so the full
+   frame shows with no cropping. */
 .price-img {
   position: relative;
-  height: min(64vh, 560px);
+  width: 100%;
+  aspect-ratio: 1500 / 994;
   overflow: hidden;
 }
 
 .price-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.9s var(--ease);
 }
 

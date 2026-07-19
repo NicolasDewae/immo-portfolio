@@ -26,6 +26,7 @@ const Nav = ({ onNavigate }) => {
       <ul className="nav__links">
         <li><a href="#about" onClick={go('about')}>Portfolio</a></li>
         <li><a href="#tarifs" onClick={go('tarifs')}>Tarifs</a></li>
+        <li><a href="#faq" onClick={go('faq')}>FAQ</a></li>
         <li><a href="#contact" onClick={go('contact')}>Contact</a></li>
       </ul>
     </nav>

@@ -30,19 +30,27 @@ export const images = {
         src: '/assets/img/immo-salle-a-manger-vaisselier-blanc.jpg',
         alt: 'salle à manger classique avec vaisselier blanc et arche ouverte sur le salon',
     },
-    chambreTeteLit: {
-        src: '/assets/img/immo-chambre-tete-lit.jpg',
-        alt: 'tête de lit bleue capitonnée devant un papier peint à chérubins',
+    chambreTeteLitRayee: {
+        src: '/assets/img/immo-chambre-tete-lit-rayee.jpg',
+        alt: 'tête de lit capitonnée devant un papier peint à rayures jaunes et grises',
     },
     cuisineIlot: {
         src: '/assets/img/immo-cuisine-ilot.jpg',
         alt: 'cuisine avec îlot arrondi en bois clair et vaisselier vitré',
         orientation: 'horizontal',
     },
-    chambreBleue: {
-        src: '/assets/img/immo-chambre-bleue.jpg',
-        alt: 'chambre classique avec tête de lit bleue capitonnée et papier peint fleuri',
+    salonCoussinsLosanges: {
+        src: '/assets/img/immo-salon-coussins-losanges.jpg',
+        alt: 'coussins colorés sur canapé beige devant un papier peint à losanges',
+        objectPosition: 'bottom',
+    },
+    chambreHotelFauteuils: {
+        src: '/assets/img/immo-chambre-hotel-fauteuils.jpg',
+        alt: 'chambre d\'hôtel classique avec lit à coussin rouge, fauteuils à carreaux et tapis oriental',
         orientation: 'horizontal',
+        fit: 'contain',
+        ratio: '1500 / 994',
+        shiftRight: '32%',
     },
     cuisineBlanche: {
         src: '/assets/img/immo-cuisine-blanche.jpg',
@@ -108,11 +116,18 @@ export const images = {
         src: '/assets/img/immo-la-lilloise-dressing-bleu.jpg',
         alt: 'dressing bleu avec miroir et pouf en velours',
         orientation: 'vertical',
+        fit: 'contain',
     },
     lilloiseExterieurBoisZinc: {
         src: '/assets/img/immo-la-lilloise-exterieur-bois-zinc.jpg',
         alt: 'extérieur d\'une maison contemporaine en bois et zinc',
         orientation: 'horizontal',
+    },
+    piscineInterieure: {
+        src: '/assets/img/immo-piscine-interieure.jpg',
+        alt: 'piscine intérieure sous verrière avec spa et vue sur le jardin',
+        orientation: 'horizontal',
+        objectPosition: 'left',
     },
 }
 
@@ -136,6 +151,37 @@ export const figuresComponent = {
     title: 'Des chiffres au service de vos annonces',
     body: '300+ biens photographiés, livraison en 24h, déplacement inclus sur la métropole lilloise. Une prestation calibrée pour les agences comme pour les particuliers.',
     cta: 'Travailler ensemble',
+}
+
+export const faqComponent = {
+    label: 'Questions fréquentes',
+    title: 'Vous vous posez des questions ?',
+    items: [
+        {
+            question: 'Combien coûte une séance photo immobilière ?',
+            answer: 'La prestation est à 90 € TTC et inclut 12 photos. Chaque photo supplémentaire est facturée 5 €.',
+        },
+        {
+            question: 'Quel est le délai de livraison ?',
+            answer: 'Les photos sont livrées sous 24h après la prise de vue.',
+        },
+        {
+            question: 'Le déplacement est-il inclus ?',
+            answer: 'Oui, sur toute la métropole lilloise. Au-delà, un forfait de 0,50 €/km (aller-retour) s\'applique.',
+        },
+        {
+            question: 'Proposez-vous une formule pour les petits espaces (studio) ?',
+            answer: 'Oui : pour un studio, le reportage comprend 7 photos, pour un rendu juste, sans redite.',
+        },
+        {
+            question: 'Puis-je commander des photos en plus après coup ?',
+            answer: 'Oui, chaque photo supplémentaire est facturée 5 € l\'unité.',
+        },
+        {
+            question: 'À qui s\'adresse ce service ?',
+            answer: 'Aux agences immobilières, promoteurs et particuliers qui souhaitent valoriser un bien à vendre ou à louer.',
+        },
+    ],
 }
 
 export const contactComponent = {

@@ -1,6 +1,6 @@
 import '../styles/index.css';
 import '../styles/App.css';
-import { globalData } from '../data/content';
+import { globalData, price, priceComponent } from '../data/content';
 import { siteUrl } from '../data/site';
 
 const siteName = `${globalData.authorName} — Photographe immobilier`;
@@ -34,12 +34,31 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  '@id': `${siteUrl}/#business`,
   name: siteName,
-  description: 'Photographe immobilier pour agences, promoteurs et particuliers sur la métropole lilloise.',
-  areaServed: 'Métropole lilloise',
-  priceRange: '€€',
-  email: globalData.email,
+  description: 'Photographe immobilier pour agences, promoteurs et particuliers sur la métropole lilloise. Reportage photo livré en 24h.',
+  image: `${siteUrl}${ogImage}`,
   url: siteUrl,
+  email: globalData.email,
+  priceRange: '€€',
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Métropole Européenne de Lille',
+  },
+  founder: {
+    '@type': 'Person',
+    name: globalData.authorName,
+  },
+  makesOffer: {
+    '@type': 'Offer',
+    name: 'Reportage photo immobilier',
+    description: `${priceComponent.nbPhoto} photos incluses, livraison en ${priceComponent.time}. ${priceComponent.travel}. Photo supplémentaire : ${price.extraPhoto} € / unité. ${priceComponent.studioNote}`,
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: price.priceBase,
+      priceCurrency: 'EUR',
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

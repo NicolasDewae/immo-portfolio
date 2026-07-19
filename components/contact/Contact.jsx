@@ -11,7 +11,9 @@ const Contact = () => {
           src={images.cuisineNoire.src}
           alt={images.cuisineNoire.alt}
           fill
-          sizes="(max-width: 800px) 100vw, 50vw"
+          sizes="(max-width: 800px) 100vw, 151vh"
+          quality={90}
+          priority
         />
         <div className="contact-img__overlay" />
       </div>

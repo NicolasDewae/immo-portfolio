@@ -62,7 +62,18 @@
   height: 56%;
   right: 0;
   bottom: -10%;
-  box-shadow: 0 20px 50px rgba(24, 20, 15, 0.18);
+}
+
+/* A photo shown with object-fit: contain sits in a box sized to its own
+   ratio, so there's no letterboxing left to fill. The base keeps its
+   width and grows/shrinks its height; the overlap keeps its height
+   (its bottom-anchored position matters more) and grows its width. */
+.collage__media-base--fit {
+  height: auto;
+}
+
+.collage__media-overlap--fit {
+  width: auto;
 }
 
 /* ── Text block ── */
