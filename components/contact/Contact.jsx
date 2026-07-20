@@ -48,39 +48,53 @@ const Contact = () => {
         <span className="contact-label eyebrow reveal">Contact</span>
         <h2 className="contact-heading reveal d1">{contactComponent.title}</h2>
 
-        <form className="contact-form reveal d2" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="form-field">
-              <input type="text" name="firstname" placeholder=" " id="firstname" required />
-              <label htmlFor="firstname">{contactComponent.form.firstname}</label>
-            </div>
-            <div className="form-field">
-              <input type="text" name="lastname" placeholder=" " id="lastname" required />
-              <label htmlFor="lastname">{contactComponent.form.lastname}</label>
-            </div>
-          </div>
-          <div className="form-field">
-            <input type="email" name="email" placeholder=" " id="email" required />
-            <label htmlFor="email">{contactComponent.form.email}</label>
-          </div>
-          <div className="form-field">
-            <input type="text" name="phone" placeholder=" " id="phone" />
-            <label htmlFor="phone">{contactComponent.form.phone}</label>
-          </div>
-          <div className="form-field">
-            <textarea name="message" placeholder=" " id="message" required />
-            <label htmlFor="message">{contactComponent.form.message}</label>
-          </div>
-
-          <div className="form-actions">
-            <button type="submit" className="btn-pill" disabled={status === 'sending'}>
-              {status === 'sending' ? contactComponent.form.sending : contactComponent.form.submit}
+        {status === 'success' ? (
+          <div className="contact-success">
+            <span className="contact-success__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <p className="contact-success__title">{contactComponent.form.successTitle}</p>
+            <p className="contact-success__body">{contactComponent.form.successBody}</p>
+            <button type="button" className="contact-success__reset" onClick={() => setStatus('idle')}>
+              {contactComponent.form.reset}
             </button>
           </div>
+        ) : (
+          <form className="contact-form reveal d2" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <div className="form-field">
+                <input type="text" name="firstname" placeholder=" " id="firstname" required />
+                <label htmlFor="firstname">{contactComponent.form.firstname}</label>
+              </div>
+              <div className="form-field">
+                <input type="text" name="lastname" placeholder=" " id="lastname" required />
+                <label htmlFor="lastname">{contactComponent.form.lastname}</label>
+              </div>
+            </div>
+            <div className="form-field">
+              <input type="email" name="email" placeholder=" " id="email" required />
+              <label htmlFor="email">{contactComponent.form.email}</label>
+            </div>
+            <div className="form-field">
+              <input type="text" name="phone" placeholder=" " id="phone" />
+              <label htmlFor="phone">{contactComponent.form.phone}</label>
+            </div>
+            <div className="form-field">
+              <textarea name="message" placeholder=" " id="message" required />
+              <label htmlFor="message">{contactComponent.form.message}</label>
+            </div>
 
-          {status === 'success' && <p className="form-status form-status--success">{contactComponent.form.success}</p>}
-          {status === 'error' && <p className="form-status form-status--error">{contactComponent.form.error}</p>}
-        </form>
+            <div className="form-actions">
+              <button type="submit" className="btn-pill" disabled={status === 'sending'}>
+                {status === 'sending' ? contactComponent.form.sending : contactComponent.form.submit}
+              </button>
+            </div>
+
+            {status === 'error' && <p className="form-status form-status--error">{contactComponent.form.error}</p>}
+          </form>
+        )}
 
         <div className="contact-footer reveal d4">
           <span>photographe immobilier</span>

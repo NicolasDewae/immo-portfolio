@@ -194,7 +194,9 @@ export const contactComponent = {
         message: 'Message',
         submit: 'Envoyer',
         sending: 'Envoi en cours...',
-        success: 'Message envoyé, merci !',
+        successTitle: 'Message envoyé',
+        successBody: 'Merci, je vous réponds dans les plus brefs délais.',
+        reset: 'Envoyer un autre message',
         error: "Une erreur est survenue, réessayez ou écrivez-moi directement."
     },
 }
