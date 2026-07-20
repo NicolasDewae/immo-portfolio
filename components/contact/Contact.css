@@ -127,6 +127,20 @@
   margin-top: 24px;
 }
 
+.form-status {
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+}
+
+.form-status--success {
+  color: #2f6b3a;
+}
+
+.form-status--error {
+  color: #b3392c;
+}
+
 .contact-footer {
   margin-top: 28px;
   padding-top: 20px;
