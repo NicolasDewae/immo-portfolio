@@ -192,6 +192,9 @@ export const contactComponent = {
         email: 'Email',
         phone: 'Téléphone',
         message: 'Message',
-        submit: 'Envoyer'
+        submit: 'Envoyer',
+        sending: 'Envoi en cours...',
+        success: 'Message envoyé, merci !',
+        error: "Une erreur est survenue, réessayez ou écrivez-moi directement."
     },
 }
