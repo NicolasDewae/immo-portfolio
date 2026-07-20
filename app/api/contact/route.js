@@ -11,10 +11,10 @@ export async function POST(request) {
   }
 
   const { error } = await resend.emails.send({
-    from: process.env.RESEND_FROM_EMAIL,
+    from: `Site immo <${process.env.RESEND_FROM_EMAIL}>`,
     to: process.env.CONTACT_EMAIL,
     replyTo: email,
-    subject: `Nouveau message de ${firstname} ${lastname}`,
+    subject: `[Site immo] Nouveau message de ${firstname} ${lastname}`,
     text: [
       `Prénom : ${firstname}`,
       `Nom : ${lastname}`,
